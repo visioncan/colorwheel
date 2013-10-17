@@ -150,8 +150,8 @@ Raphael.colorwheel = function(target, color_wheel_size, no_segments){
 
   function cursor_create(size){
     var set = canvas.set().push(
-        canvas.circle(0, 0, size).attr({"stroke-width":4, stroke:"#333"}),
-        canvas.circle(0, 0, size+2).attr({"stroke-width":1, stroke:"#FFF", opacity:0.5})
+        canvas.circle(0, 0, size).attr({"stroke-width":6, stroke:"#000", opacity:0.3}),
+        canvas.circle(0, 0, size).attr({"stroke-width":3, stroke:"#FFF"})
     );
 
     set[0].node.style.cursor = "crosshair";
@@ -256,7 +256,7 @@ Raphael.colorwheel = function(target, color_wheel_size, no_segments){
     box = [sdim.x, sdim.y, sdim.l, sdim.l];
 
     bs_square.h = canvas.rect.apply(canvas, box).attr({
-      stroke:"#EEE", gradient: "0-#FFF-#000", opacity:1});
+      stroke:"#000", gradient: "0-#FFF-#000", opacity:1});
     bs_square.s = canvas.rect.apply(canvas, box).attr({
       stroke:null, gradient: "0-#FFF-#FFF", opacity:0});
     bs_square.b = canvas.rect.apply(canvas, box).attr({
@@ -296,7 +296,7 @@ Raphael.colorwheel = function(target, color_wheel_size, no_segments){
     hue_ring.event = canvas.circle(
       center,
       center,
-      center-tri_size-padding).attr({"stroke-width":tri_size*2, opacity:0.01});
+      center-tri_size-padding).attr({"stroke-width":tri_size*2, opacity:0});
 
     hue_ring.outline = canvas.circle(
       center,
